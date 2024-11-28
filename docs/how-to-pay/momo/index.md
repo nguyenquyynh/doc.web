@@ -1,6 +1,6 @@
 ---
 title: momo
 label: Momo
-slug: /how-to-pay/momo
+slug: //
 ---
 Hướng dẫn mua hàng với Momo BanBank
