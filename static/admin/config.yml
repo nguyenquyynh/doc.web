@@ -10,13 +10,19 @@ public_folder: "/img/" # The src attribute for uploaded media will begin with /i
 collections:
 - name: Doc (VI)
   label: "Doc (VI)"
+  label_singular: "Doc (VI)"
   folder: docs
   identifier_field: title
   extension: md
   widget: "list"
   create: true
+  delete: true
+  nested: { depth: 100 }
   slug: "{{slug}}"
+  summary: "{{slug}} - {{filename}}"
   fields:
     - { name: title, label: Title, widget: string }
+    - { name: label, label: Label, widget: string }
     - { name: body, label: Body, widget: markdown }
     - { name: slug, label: Slug, widget: string, required: false }
+  meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
